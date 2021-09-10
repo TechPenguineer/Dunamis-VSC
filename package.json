@@ -1,0 +1,25 @@
+{
+    "name": "dunamis",
+    "displayName": "Dunamis",
+    "description": "Language support for the Dunamis Language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "dunamis",
+            "aliases": ["Dunamis", "dunamis"],
+            "extensions": [".duna"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "dunamis",
+            "scopeName": "source.duna",
+            "path": "./syntaxes/dunamis.tmLanguage.json"
+        }]
+    }
+}

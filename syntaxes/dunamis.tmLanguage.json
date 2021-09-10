@@ -1,0 +1,76 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Dunamis",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#methods"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#functions"
+		}
+	],
+	
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.dunamis",
+				"match": "\\b(if|while|for|return)\\b"
+			}]
+		},
+	"operations":
+	{
+		"name":"keyword.operator",
+		"match": "\\b(+|-|=|/|%|!|<|>)\\b"
+	},
+	"numbers":{
+		"match": "\\b(1|2|3|4|5|6|7|8|9|0)\\b",
+		"name": "support.other"
+	},
+	"variables":{
+		"match": "\\b(int|float|str|obj)\\b",
+		"name":"variable.name"
+	},
+	"methods":
+	{
+		"name": "entity.name.method",
+		"match": "\\b(print)\\b"
+	},
+	"functions":{
+		"name":"entity.name.function",
+		"match": "\\b(fx)\\b"
+	},
+		"comments": {
+			"name": "comment.line",
+			"begin": "###",
+			"end": "\n"
+
+		},
+		"strings": {
+			"name": "string.quoted.double.dunamis",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.dunamis",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.duna"
+}
